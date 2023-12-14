@@ -1,0 +1,240 @@
+/*Importação das fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/*root criado para criar as váriaveis do css*/
+:root{
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-fundo: #00030c;
+    --branco-terciario: #F9F9F9;
+
+    --fonte-principal:  'Inter', sans-serif;
+    --peso-bold: 700;
+    --peso-regular: 400;
+}
+
+/*Estlização geral da página*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: var(--cor-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 1rem;
+    font-weight: var(--peso-regular);
+}
+
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+/*Estilização da seção principal da página*/
+.principal{
+    background-image: url(../imagens/Background.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-items: center;
+    text-align: center;
+}
+
+.principal__conteudo{
+    margin: 0 6em 0 5em;
+}
+
+.principal__conteudo__titulo{
+    font-size: 1.75rem;
+}
+
+.principal__conteudo__imagem{
+    margin: 1em 0 2em 0;
+}
+
+.principal__conteudo__botao{
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--branco-principal);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 1em;
+    border: 2px solid var(--botao-azul);
+}
+
+.principal__conteudo__botao:hover{
+    color: var(--botao-azul);
+    background-color: var(--cor-fundo);
+    border: 2px solid var(--botao-azul);
+}
+
+.botao-secundario {
+    background-color: var(--cor-fundo);
+    border: 2px solid var(--branco-principal);
+}
+
+.botao-secundario:hover{
+    color: var(--botao-azul);
+    border-color: var(--botao-azul);
+}
+
+.principal__conteudo__aviso{
+    font-size: 0.75rem;
+    color: var(--cinza-secundario);
+}
+
+/*Estilização da segunda, terceira e quarta seção da página. 
+Foram reutilizados os mesmos códigos por serem os mesmos formatos de estilização*/
+.secundario{
+    align-items: center;
+    margin: 0 10em;
+}
+
+.secundario__imagem{
+    width: 80%;
+}
+
+.secundario__conteudos{
+    padding: 2em;
+}
+
+.secundario__conteudos__titulo{
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 0.1em;
+}
+
+.secundario__conteudos__paragrafo{
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--branco-terciario);
+}
+
+/*Estilização da terceira seção da página*/
+.secundario__conteudos__botao{
+    display: inline-block;
+    margin-top: 1em;
+}
+
+/*Estilização da quarta seção da página*/
+.dispositivos{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2.5rem;
+    margin-bottom: 9.0625rem;
+}
+
+.dispositivos__titulo{
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.dispositivos__lista{
+    display: flex;
+    flex-direction: row;
+    gap: 4.3125rem;
+    list-style-type: none;
+}
+
+.dispositivos__lista__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--branco-principal);
+}
+
+.dispositivos__lista__item__imagem{
+    width: 21.1875rem;
+    height: 12rem;
+}
+
+.dispositivos__lista__item__subtitulo{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/*Estilização do footer*/
+.rodape{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    margin: 5em 3em;
+}
+
+.rodape__logo{
+    width: 6.375rem;
+    height: 2.205rem;
+    margin-bottom: 1.045rem;
+}
+
+.rodape__lista{
+    display: flex;
+    text-align: center;
+    list-style-type: none;
+    gap: 1rem;
+}
+
+.rodape__lista__item__link{
+    text-decoration: none;
+    color: var(--branco-principal);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.rodape__lista__item__link:hover{
+    color: var(--cinza-secundario);
+}
+
+.rodape__texto{
+    color: var(--cinza-secundario);
+    font-weight: 400;
+    font-size: 0.875rem;
+    width: 65%;
+}
+
+@media screen and (max-width: 768px){
+
+    main{
+        width: 90%;
+        margin: 0 5%;
+    }
+    .container{
+        display: block;
+        background-image: none;
+    }
+
+    .container__imagem{
+        width: 50vw;
+    }
+    
+    .principal__conteudo{
+        margin: 2em 2em;
+    }
+
+    .secundario{
+        margin: auto;
+        text-align: center;
+    }
+
+    .secundario__imagem{
+        width: 50vw;
+    }
+
+    .dispositivos__lista{
+        display: block;
+    }
+
+    .rodape__lista{
+        display: block;
+    }
+}
